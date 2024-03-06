@@ -28,4 +28,8 @@
 #endif
 }
 
+- (BOOL)applicationSupportsSecureRestorableState:(UIApplication *)application {
+    return YES;
+}
+
 @end
