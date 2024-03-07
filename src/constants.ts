@@ -3,5 +3,6 @@ export enum Colors {
   DARKER_GRAY = '#2C2D35',
   GRAY = '#6D6972',
   LIGHTER_GRAY = '#73767F',
-  DARK_GRAY = '595C66',
+  DARK_GRAY = '#595C66',
+  ERROR = '#B00020',
 }

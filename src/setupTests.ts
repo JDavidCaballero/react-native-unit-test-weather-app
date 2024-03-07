@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 // include this line for mocking react-native-gesture-handler
 import 'react-native-gesture-handler/jestSetup';
+import '@testing-library/jest-native/extend-expect';
 
 // include this section and the NativeAnimatedHelper section for mocking react-native-reanimated
 jest.mock('react-native-reanimated', () => {
