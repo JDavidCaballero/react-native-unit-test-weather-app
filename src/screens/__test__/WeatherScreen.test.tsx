@@ -69,4 +69,28 @@ describe('Weather Screen', () => {
       wrapper.getByText(`Humidity: ${mockWeatherResponse.humidity}%`);
     });
   });
+
+  test("should render de uri's image", async () => {
+    const mockWeatherResponse: WeatherType = {
+      city: 'Test City',
+      description: 'Test Description',
+      icon: 'Test Icon',
+      temperature: 20,
+      windSpeed: 10,
+      humidity: 50,
+      pressure: 1000,
+    };
+
+    (WeatherService.fetchCurrentWeather as jest.Mock).mockResolvedValueOnce(
+      mockWeatherResponse,
+    );
+
+    const wrapper = render(<WeatherScreen />);
+
+    await waitFor(() => {
+      expect(wrapper.getByTestId('weather-icon').props.source.uri).toBe(
+        mockWeatherResponse.icon,
+      );
+    });
+  });
 });

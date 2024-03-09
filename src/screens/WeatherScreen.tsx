@@ -50,6 +50,7 @@ function WeatherScreen() {
       ) : (
         <View style={styles.infoContainer}>
           <Image
+            testID="weather-icon"
             style={styles.icon}
             source={{uri: weatherResponse?.icon} as ImageProps}
           />
